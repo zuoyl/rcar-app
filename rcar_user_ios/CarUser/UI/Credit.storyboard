@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Credit Shop-->
+        <scene sceneID="Kbe-gM-gyZ">
+            <objects>
+                <viewController storyboardIdentifier="CreditShopViewController" id="jWB-wm-3Zq" userLabel="Credit Shop" customClass="CreditShopViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZAO-hC-ERx"/>
+                        <viewControllerLayoutGuide type="bottom" id="o2w-4V-0xO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fJ3-FF-0t5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="您当前的积分为:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQM-Qv-D3j">
+                                <rect key="frame" x="61" y="65" width="124" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3p-C6-Veg">
+                                <rect key="frame" x="24" y="94" width="60" height="30"/>
+                                <animations/>
+                                <state key="normal" title="积分详细">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="creditDetailBtnTaped:" destination="jWB-wm-3Zq" eventType="touchUpInside" id="BG8-fc-HsL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5z-Cz-UxL">
+                                <rect key="frame" x="195" y="94" width="75" height="30"/>
+                                <animations/>
+                                <state key="normal" title="怎样赚积分">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="credtiGetBtnTaped:" destination="jWB-wm-3Zq" eventType="touchUpInside" id="3O4-KH-DKY"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="RUe-f9-8pJ">
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="积分值" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWK-1o-2VI">
+                                <rect key="frame" x="195" y="65" width="51" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="creditLabel" destination="PWK-1o-2VI" id="iet-4h-eoX"/>
+                        <outlet property="tableView" destination="RUe-f9-8pJ" id="68Y-RO-Dra"/>
+                        <segue destination="sg5-e5-Vaq" kind="show" identifier="credit_show_detail" id="iEJ-YT-StB"/>
+                        <segue destination="dbW-YH-kdJ" kind="show" identifier="credit_show_help" id="Mat-14-oGi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gXG-7X-xb6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="309" y="353"/>
+        </scene>
+        <!--Credit Detail-->
+        <scene sceneID="R83-zl-wrO">
+            <objects>
+                <viewController id="sg5-e5-Vaq" userLabel="Credit Detail" customClass="CreditDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IGg-Zo-pZh"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cdb-Ht-1a2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lgI-Yz-BuG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SBa-Ft-cnU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-111" y="1126"/>
+        </scene>
+        <!--Credit Help-->
+        <scene sceneID="Jfo-b0-2iG">
+            <objects>
+                <viewController id="dbW-YH-kdJ" userLabel="Credit Help" customClass="CreditHelpViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GGb-aB-SrR"/>
+                        <viewControllerLayoutGuide type="bottom" id="jYK-st-ugF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="afS-wn-tfj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="inf-jf-hKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="703" y="1126"/>
+        </scene>
+    </scenes>
+</document>

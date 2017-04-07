@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>question</key>
+		<string>软件怎么使用</string>
+		<key>answer</key>
+		<string>软件就这么使用吧。</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>为什么1+1= 2</string>
+		<key>answer</key>
+		<string>我也想知道啊</string>
+	</dict>
+</array>
+</plist>

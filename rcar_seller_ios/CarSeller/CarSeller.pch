@@ -1,0 +1,70 @@
+//
+//  CarSeller.pch
+//  CarSeller
+//
+//  Created by jenson.zuo on 22/12/14.
+//  Copyright (c) 2014 Cloud Stone Technology. All rights reserved.
+//
+
+#ifndef CarSeller_CarSeller_pch
+#define CarSeller_CarSeller_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+//#import "Reachability.h"
+#import "SDWebImageManager.h"
+
+#import "AppDelegate.h"
+#import "UIImageView+WebCache.h"
+#import "DCArrayMapping.h"
+#import "DCKeyValueObjectMapping.h"
+#import "DCParserConfiguration.h"
+#import "RCar.h"
+#import "UIColor+SSToolkitAdditions.h"
+
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
+#import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
+#import <BaiduMapAPI_Search/BMKSearchComponent.h>//引入检索功能所有的头文件
+#import <BaiduMapAPI_Cloud/BMKCloudSearchComponent.h>//引入云检索功能所有的头文件
+#import <BaiduMapAPI_Location/BMKLocationComponent.h>//引入定位功能所有的头文件
+#import <BaiduMapAPI_Utils/BMKUtilsComponent.h>//引入计算工具所有的头文件
+#import <BaiduMapAPI_Radar/BMKRadarComponent.h>//引入周边雷达功能所有的头文件
+#import <BaiduMapAPI_Map/BMKMapView.h>//只引入所需的单个头文件
+#import "MxAlertView.h"
+
+
+
+#define Is_iOS7 [[[UIDevice currentDevice] systemVersion] floatValue]>=7.0
+// iOS7以下,状态栏依然隐藏时App_Height=480，状态栏显示时App_Height=460;iOS7以上状态栏为独立的浮动层，App_Height固定为480
+#define App_Height ([[[UIDevice currentDevice] systemVersion] floatValue]>=7.0 ? [UIScreen mainScreen].bounds.size.height :[UIScreen mainScreen].applicationFrame.size.height)
+#define Is_iPhone4Inch [UIScreen mainScreen].bounds.size.height>480
+
+
+#define SharedAppDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+#define SDWebImageOption SDWebImageRetryFailed|SDWebImageLowPriority|SDWebImageProgressiveDownload//|SDWebImageCacheMemoryOnly
+#define USE_JSONKIT
+
+// 颜色
+#define Main_Background_Color @"f0f0f0"
+#define Light_Blue_Color @"1673ba"
+#define Black_Color_Type1 @"323232"
+#define Black_Color_Type2 @"505050"
+#define Gray_Color_Type1 @"646464"
+#define Gray_Color_Type2 @"969696"
+
+
+
+
+
+
+#endif

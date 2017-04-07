@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "82842C38D55FD63C7190837450C42F17C945F2C9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "82842C38D55FD63C7190837450C42F17C945F2C9" : 0,
+    "DEC1B51A8A80948E859D6FEF84ADBAC8A0BEBC0F" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F82E6076-E11D-4D97-9A27-1BC6CA1FE5A4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "82842C38D55FD63C7190837450C42F17C945F2C9" : "rcar_user_ios\/",
+    "DEC1B51A8A80948E859D6FEF84ADBAC8A0BEBC0F" : "rcar_seller_ios"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CarUser",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CarUser.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/jongkhurun.com:7777\/rcar\/rcar_user_ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "82842C38D55FD63C7190837450C42F17C945F2C9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/jongkhurun.com:7777\/rcar\/rcar_seller_ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DEC1B51A8A80948E859D6FEF84ADBAC8A0BEBC0F"
+    }
+  ]
+}

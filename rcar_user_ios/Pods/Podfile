@@ -1,0 +1,15 @@
+platform:ios,'8.1'
+
+pod 'AFNetworking', "~> 2.0"
+pod 'JSONKit'
+pod 'SDURLCache'
+pod 'ViewDeck'
+pod 'CocoaLumberjack'
+pod 'SDWebImage','2.7.4'
+pod 'WebViewJavascriptBridge'
+pod 'DCIntrospect'
+pod 'MBProgressHUD'
+pod 'NoticeView','2.4'
+pod 'ISRefreshControl', '~>1.4.1'
+pod 'MWPhotoBrowser'
+pod 'SDWebImage', '~>3.6'

@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Seller Info View Controller-->
+        <scene sceneID="9EK-dD-M3h">
+            <objects>
+                <viewController storyboardIdentifier="SellerInfoViewController" id="Bs2-TD-gki" customClass="SellerInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PW2-ut-Tj0"/>
+                        <viewControllerLayoutGuide type="bottom" id="NrN-SP-Mhk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E3M-eT-2Pj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="Xa7-LU-mqC" kind="show" identifier="show_seller_activity_detail" id="gug-b0-VZU"/>
+                        <segue destination="Aj4-lE-wdM" kind="show" identifier="show_seller_commodity_detail" id="25D-Hn-red"/>
+                        <segue destination="33U-Ro-gvP" kind="show" identifier="show_seller_comments" id="RZw-mu-nBg"/>
+                        <segue destination="BTe-bd-R6W" kind="show" identifier="show_seller_service_list" id="t3U-AT-6VJ"/>
+                        <segue destination="cpu-UP-Eb0" kind="show" identifier="show_seller_service_detail" id="sV4-UH-o2X"/>
+                        <segue destination="u1g-yt-DjN" kind="show" identifier="show_seller_commodity_list" id="AsQ-qn-GHt"/>
+                        <segue destination="5Bf-Gm-26p" kind="show" identifier="show_seller_activity_list" id="97s-Hi-8Ed"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l7o-Ar-erw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1096" y="421"/>
+        </scene>
+        <!--Seller Activity List View Controller-->
+        <scene sceneID="iw1-0p-p2Q">
+            <objects>
+                <tableViewController storyboardIdentifier="SellerActivityList" id="5Bf-Gm-26p" customClass="SellerActivityListViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="MUg-Ng-2K1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="kit-Ev-aml">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kit-Ev-aml" id="Gzh-kr-d0G">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5Bf-Gm-26p" id="nMV-6B-f3q"/>
+                            <outlet property="delegate" destination="5Bf-Gm-26p" id="Ean-br-0bs"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="Xa7-LU-mqC" kind="show" identifier="show_seller_activity_detail" id="o00-iU-Yz4"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PKn-Q0-StX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-413" y="1301"/>
+        </scene>
+        <!--Seller Commodity List View Controller-->
+        <scene sceneID="4Vw-aN-5uG">
+            <objects>
+                <tableViewController storyboardIdentifier="SellerCommodityList" id="u1g-yt-DjN" customClass="SellerCommodityListViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="yTb-sz-muQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="kN4-kN-ELa">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kN4-kN-ELa" id="Ne1-kK-TsT">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="u1g-yt-DjN" id="Ny3-UC-WXm"/>
+                            <outlet property="delegate" destination="u1g-yt-DjN" id="XEs-CS-Uyn"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NEb-iX-dXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="417" y="1301"/>
+        </scene>
+        <!--Seller Activity Detail-->
+        <scene sceneID="fDA-0s-esp">
+            <objects>
+                <viewController id="Xa7-LU-mqC" userLabel="Seller Activity Detail" customClass="SellerActivityDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uMV-cB-yzX"/>
+                        <viewControllerLayoutGuide type="bottom" id="aB9-QA-FbP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tg1-o8-tT9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="zKN-un-Cl1">
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="zKN-un-Cl1" id="q1J-qT-94u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6R9-iZ-sNX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34" y="2219"/>
+        </scene>
+        <!--Seller Commdity Detail-->
+        <scene sceneID="840-dd-Al0">
+            <objects>
+                <viewController storyboardIdentifier="SellerCommodityDetail" id="Aj4-lE-wdM" userLabel="Seller Commdity Detail" customClass="SellerCommodityDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lDx-ol-jth"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qti-H8-SYf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m4l-ZH-4QS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="7P8-Z3-aVc">
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="7P8-Z3-aVc" id="ehK-UP-0FQ"/>
+                        <segue destination="wvz-5p-w2D" kind="show" identifier="commodity_show_comments" id="y6J-g5-vOA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5zV-x6-XqR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="723" y="2203"/>
+        </scene>
+        <!--Commodity Comment List View Controller-->
+        <scene sceneID="Hbr-S6-Evz">
+            <objects>
+                <tableViewController storyboardIdentifier="SellerCommodityCommentList" id="wvz-5p-w2D" customClass="CommodityCommentListViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2k9-52-h6Q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="wvz-5p-w2D" id="zp2-W1-qAV"/>
+                            <outlet property="delegate" destination="wvz-5p-w2D" id="GL1-0W-Pjb"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2CB-8w-lVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="723" y="3159"/>
+        </scene>
+        <!--Seller Service Contact-->
+        <scene sceneID="h25-ps-PG1">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="mHU-6X-jEF" userLabel="Seller Service Contact" customClass="SellerServiceContactViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AKA-uY-ysJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="sB6-6A-niY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Lo-6N-fJ2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohu-EC-Osp">
+                                <rect key="frame" x="169" y="458" width="90" height="30"/>
+                                <state key="normal" title="等待商家联系">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="laterBtnTaped:" destination="mHU-6X-jEF" eventType="touchUpInside" id="kND-0u-62b"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="300" translatesAutoresizingMaskIntoConstraints="NO" id="5bF-bd-dxV">
+                                <rect key="frame" x="0.0" y="146" width="320" height="160"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="在服务预约后，您可以选择【等待商家联系】，等待商家之后联系您。也可以选择【取消】，取消本次服务预约。" translatesAutoresizingMaskIntoConstraints="NO" id="Amb-Us-6si">
+                                <rect key="frame" x="3" y="72" width="320" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="0UB-i3-ihh">
+                                <rect key="frame" x="0.0" y="315" width="320" height="144"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaW-je-89x">
+                                <rect key="frame" x="73" y="458" width="30" height="30"/>
+                                <state key="normal" title="取消">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelBtnTaped:" destination="mHU-6X-jEF" eventType="touchUpInside" id="tni-M3-Kk3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="cancelBtn" destination="yaW-je-89x" id="IGG-xd-n6L"/>
+                        <outlet property="laterBtn" destination="ohu-EC-Osp" id="tCp-ID-sLu"/>
+                        <outlet property="placeholder" destination="5bF-bd-dxV" id="9GH-db-esL"/>
+                        <outlet property="tableView" destination="0UB-i3-ihh" id="rqc-ux-lAo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LzH-lB-gPH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3222" y="1085"/>
+        </scene>
+        <!--Service Reserve View Controller-->
+        <scene sceneID="hY0-Lv-G7p">
+            <objects>
+                <tableViewController id="Heu-dj-mul" customClass="ServiceReserveViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="UZs-uy-lFV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TYs-mD-uws">
+                                <rect key="frame" x="0.0" y="22" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TYs-mD-uws" id="ymT-6Z-ImB">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Heu-dj-mul" id="Mta-EO-Xck"/>
+                            <outlet property="delegate" destination="Heu-dj-mul" id="eT6-KE-K44"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="94s-b5-2sz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2136" y="2187"/>
+        </scene>
+        <!--Seller Service List View Controller-->
+        <scene sceneID="4pR-sN-uva">
+            <objects>
+                <tableViewController storyboardIdentifier="SellerServiceList" id="BTe-bd-R6W" customClass="SellerServiceListViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ww5-Ul-jBa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Gjt-IC-4Oo">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gjt-IC-4Oo" id="bK0-lf-psW">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BTe-bd-R6W" id="42Q-lN-m5v"/>
+                            <outlet property="delegate" destination="BTe-bd-R6W" id="Z44-ge-vi1"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="Heu-dj-mul" kind="show" identifier="segue_service_reserve" id="ZLR-sm-nxL"/>
+                        <segue destination="cpu-UP-Eb0" kind="show" identifier="segue_service_detail" id="NdT-u7-eHY"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="12F-ai-b48" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1945" y="1301"/>
+        </scene>
+        <!--Seller Car Clean Service View Controller-->
+        <scene sceneID="mPC-1r-4AC">
+            <objects>
+                <viewController storyboardIdentifier="SellerCarCleanServiceViewController" id="VLh-lg-4E7" customClass="SellerCarCleanServiceViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YRq-C3-VJA"/>
+                        <viewControllerLayoutGuide type="bottom" id="G3y-CD-2bW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z03-px-Y54">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1W-2J-B2c">
+                                <rect key="frame" x="6" y="72" width="125" height="30"/>
+                                <state key="normal" title="选择服务预约时间:">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectDateBtnTaped:" destination="VLh-lg-4E7" eventType="touchUpInside" id="8zg-Wr-gx7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKB-43-Uue">
+                                <rect key="frame" x="150" y="76" width="154" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0a-e1-xaP">
+                                <rect key="frame" x="251" y="459" width="30" height="30"/>
+                                <state key="normal" title="继续">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueBtnTaped:" destination="VLh-lg-4E7" eventType="touchUpInside" id="SyP-I2-WqU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="nKB-43-Uue" id="fGn-QD-6RP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bqd-dq-yC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1379" y="2203"/>
+        </scene>
+        <!--Seller List View Controller-->
+        <scene sceneID="NZl-ER-g9F">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="kcg-yD-Hhn" customClass="SellerListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZcY-Wx-Ucl"/>
+                        <viewControllerLayoutGuide type="bottom" id="11S-CM-ikt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4VI-IB-h3l">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="h7u-nD-98F">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="activity" destination="h7u-nD-98F" id="49P-tZ-u0o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HLR-vh-FHx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3464" y="334"/>
+        </scene>
+        <!--Seller Service Detail View Controller-->
+        <scene sceneID="s5r-Od-vaj">
+            <objects>
+                <tableViewController storyboardIdentifier="SellerServiceDetailViewController" id="cpu-UP-Eb0" customClass="SellerServiceDetailViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="wYw-Vd-oCU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="cpu-UP-Eb0" id="yfj-CY-eCn"/>
+                            <outlet property="delegate" destination="cpu-UP-Eb0" id="KsS-XE-PPI"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="Heu-dj-mul" kind="show" identifier="ServiceDetailToServiceReserve" id="U0N-nJ-znt"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vHx-IP-T9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2688" y="1301"/>
+        </scene>
+        <!--Seller Comment List View Controller-->
+        <scene sceneID="LOa-wo-Ie4">
+            <objects>
+                <tableViewController storyboardIdentifier="SellerCommentList" id="33U-Ro-gvP" customClass="SellerCommentListViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4zn-KZ-t17">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SellerCommentCell" id="OoQ-nz-fKU">
+                                <rect key="frame" x="0.0" y="22" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OoQ-nz-fKU" id="xRR-NT-Ple">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="33U-Ro-gvP" id="ga9-9c-zS2"/>
+                            <outlet property="delegate" destination="33U-Ro-gvP" id="d7d-b0-aCY"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MoV-38-SlO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1256" y="1301"/>
+        </scene>
+        <!--Service List View Controller-->
+        <scene sceneID="47N-B1-6GZ">
+            <objects>
+                <viewController storyboardIdentifier="ServiceListViewController" id="Xk0-pz-t2d" customClass="ServiceListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o3G-JZ-vAS"/>
+                        <viewControllerLayoutGuide type="bottom" id="KU5-jF-nfI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cnB-Zw-agJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="YdC-5A-jRs">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="YdC-5A-jRs" id="URa-Rt-ou8"/>
+                        <segue destination="cpu-UP-Eb0" kind="show" identifier="SellerServiceDetailView" id="hwV-IL-LTo"/>
+                        <segue destination="Bs2-TD-gki" kind="show" identifier="SellerDetailView" id="1Hq-Qy-JLa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cGj-Hb-B3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1096" y="-414"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gug-b0-VZU"/>
+        <segue reference="sV4-UH-o2X"/>
+        <segue reference="ZLR-sm-nxL"/>
+    </inferredMetricsTieBreakers>
+</document>

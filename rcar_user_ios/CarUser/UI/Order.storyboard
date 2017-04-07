@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Order List View Controller-->
+        <scene sceneID="chg-fI-nNu">
+            <objects>
+                <tableViewController storyboardIdentifier="OrderListViewController" id="EJH-Fa-B31" customClass="OrderListViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="ZM7-PX-o9O">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="EJH-Fa-B31" id="R06-JA-jAG"/>
+                            <outlet property="delegate" destination="EJH-Fa-B31" id="P5z-82-C3x"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="1fv-fW-FGb" kind="show" identifier="show_order_detail_book" id="jdi-xZ-LhG"/>
+                        <segue destination="pCa-7t-Ofy" kind="show" identifier="show_order_waiting" id="xB4-4K-hog"/>
+                        <segue destination="FPH-Un-FyW" kind="show" identifier="show_order_detail_maintenance" id="GuI-71-4gh"/>
+                        <segue destination="sSI-wd-d12" kind="show" identifier="show_order_detail_fault" id="Q61-4r-8BL"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HSl-8P-mtb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="488" y="587"/>
+        </scene>
+        <!--Order Waiting View Controller-->
+        <scene sceneID="mJW-E3-DhO">
+            <objects>
+                <viewController storyboardIdentifier="OrderWaitingViewController" id="pCa-7t-Ofy" customClass="OrderWaitingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fD0-uv-apE"/>
+                        <viewControllerLayoutGuide type="bottom" id="NNh-Fx-2xr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SVh-Ty-N8s">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TKJ-T5-hXt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="589" y="2338"/>
+        </scene>
+        <!--Order Detail Book View Controller-->
+        <scene sceneID="WzR-ii-igJ">
+            <objects>
+                <tableViewController storyboardIdentifier="OrderDetailBook" id="1fv-fW-FGb" customClass="OrderDetailBookViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="WMZ-ex-yTn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="1fv-fW-FGb" id="LzH-i5-43W"/>
+                            <outlet property="delegate" destination="1fv-fW-FGb" id="FHa-DY-w9m"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uxp-vM-2sE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1258" y="1479"/>
+        </scene>
+        <!--Order Detail Maintenance View Controller-->
+        <scene sceneID="beJ-hf-kxw">
+            <objects>
+                <tableViewController storyboardIdentifier="OrderDetailMaintenance" id="FPH-Un-FyW" customClass="OrderDetailMaintenanceViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Ozi-Fn-Tc6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="FPH-Un-FyW" id="fAx-ZX-4oV"/>
+                            <outlet property="delegate" destination="FPH-Un-FyW" id="5wI-ud-Plo"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="pCa-7t-Ofy" kind="show" identifier="show_order_waiting" id="rCz-Gl-WgH"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ST-5n-liw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="589" y="1479"/>
+        </scene>
+        <!--Order Detail Fault View Controller-->
+        <scene sceneID="NGc-h0-AJy">
+            <objects>
+                <tableViewController storyboardIdentifier="OrderDetailFault" id="sSI-wd-d12" customClass="OrderDetailFaultViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Osj-EV-GBu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="sSI-wd-d12" id="pMz-mn-KhB"/>
+                            <outlet property="delegate" destination="sSI-wd-d12" id="Upy-ri-era"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="pCa-7t-Ofy" kind="show" identifier="show_order_waiting" id="jLQ-3y-XFe"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YJa-3U-dDo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-140" y="1479"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="jLQ-3y-XFe"/>
+    </inferredMetricsTieBreakers>
+</document>
